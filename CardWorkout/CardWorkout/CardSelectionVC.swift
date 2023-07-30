@@ -9,7 +9,6 @@ import UIKit
 
 class CardSelectionVC: UIViewController {
     @IBOutlet var cardImageView: UIImageView! // Image view to display cards
-    @IBOutlet var buttons: [UIButton]! // Array of buttons (Stop and Restart buttons)
     
     // Array to store the card images (Deck.allValues should be an array of UIImage)
     var cards: [UIImage] = Deck.allValues
@@ -20,9 +19,6 @@ class CardSelectionVC: UIViewController {
         super.viewDidLoad()
         
         startTimer() // Start the timer to show random images
-        for button in buttons {
-            button.layer.cornerRadius = 8 // Round the corners of the buttons
-        }
     }
     
     // Function called when the view is about to disappear
